@@ -1,0 +1,172 @@
+/* ==========================================================
+   Caravan design tokens
+   Every colour, size, radius, shadow and font lives here.
+   styles.css only references these variables.
+   ========================================================== */
+
+/* ---------- Fonts (self-hosted, subset, OFL — see assets/fonts/OFL-*.txt) ----------
+   Each family is split in two files:
+   - "latin": basic Latin + the punctuation we use
+   - "rupee": only the ₹ sign (U+20B9), downloaded only if ₹ appears on the page  */
+
+@font-face {
+  font-family: "Modak";
+  src: url("../assets/fonts/modak-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2014, U+2019;
+}
+/* Decorative Devanagari accent only ("साथ में", "गाड़ी"). Modak has no ₹ glyph. */
+@font-face {
+  font-family: "Modak";
+  src: url("../assets/fonts/modak-deva-accent.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+200C-200D, U+25CC;
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  src: url("../assets/fonts/baloo2-800-latin.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0, U+00B7, U+00D7, U+2013-2014, U+2018-2019, U+201C-201D, U+2022, U+2026, U+2190, U+2192;
+}
+@font-face {
+  font-family: "Baloo 2";
+  src: url("../assets/fonts/baloo2-800-rupee.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+20B9;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../assets/fonts/mukta-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0, U+00B7, U+00D7, U+2013-2014, U+2018-2019, U+201C-201D, U+2022, U+2026, U+2190, U+2192;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url("../assets/fonts/mukta-400-rupee.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+20B9;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url("../assets/fonts/mukta-700-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0, U+00B7, U+00D7, U+2013-2014, U+2018-2019, U+201C-201D, U+2022, U+2026, U+2190, U+2192;
+}
+@font-face {
+  font-family: "Mukta";
+  src: url("../assets/fonts/mukta-700-rupee.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+20B9;
+}
+
+:root {
+  /* ---------- Colour ----------
+     Dominant: indigo ink. Accent: turmeric.
+     Supporting colours are used only on cards, stickers and illustrations.
+     Contrast pairs checked are listed in DESIGN.md.                     */
+  --c-paper: #fff5e1;        /* cream page background */
+  --c-paper-deep: #fbe7bf;   /* alternate section background */
+  --c-ink: #1f1650;          /* deep indigo: text, big blocks (dominant) */
+  --c-ink-soft: #4a4178;     /* secondary text on paper */
+  --c-turmeric: #f4b400;     /* accent */
+  --c-marigold: #f07a1a;
+  --c-red: #b81f35;          /* signal red, darkened so white text passes AA */
+  --c-teal: #0b6363;
+  --c-pink: #f6b9c9;         /* calendar-art pastel */
+  --c-mint: #cdebc2;
+  --c-white: #ffffff;
+
+  /* text-on-colour pairings (always use these, never guess) */
+  --on-ink: var(--c-paper);
+  --on-turmeric: var(--c-ink);
+  --on-marigold: var(--c-ink);
+  --on-red: var(--c-white);
+  --on-teal: var(--c-white);
+  --on-pink: var(--c-ink);
+  --on-mint: var(--c-ink);
+
+  /* states */
+  --c-focus: var(--c-marigold);
+  --c-error: var(--c-red);
+  --c-success: var(--c-teal);
+
+  /* ---------- Type ---------- */
+  --font-display: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Mukta", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-accent: "Modak", "Baloo 2", system-ui, sans-serif; /* hero + numerals only */
+
+  --fs-xs: 0.8125rem;   /* 13px */
+  --fs-sm: 0.9375rem;   /* 15px */
+  --fs-base: 1.0625rem; /* 17px — slightly large for small phones */
+  --fs-md: 1.25rem;
+  --fs-lg: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+  --fs-xl: clamp(2rem, 1.4rem + 2.8vw, 3.25rem);
+  --fs-hero: clamp(3.75rem, 2.2rem + 8vw, 8.5rem);
+  --fs-numeral: clamp(3.5rem, 3rem + 2vw, 4.5rem);
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-body: 1.55;
+
+  /* ---------- Spacing (4px base) ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  --gutter: 1rem;
+  --content-max: 72rem;
+  --text-max: 38rem;
+
+  /* ---------- Shape ---------- */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.75rem;
+  --radius-pill: 999px;
+  --radius-arch: 999px 999px var(--radius-lg) var(--radius-lg);
+
+  --bw-thin: 2px;
+  --bw: 3px;
+  --bw-thick: 4px;
+
+  /* hard "sticker" shadows, no blur: printed-poster feel and cheap to render */
+  --shadow-sticker: 3px 3px 0 var(--c-ink);
+  --shadow-card: 6px 6px 0 var(--c-ink);
+  --shadow-pressed: 1px 1px 0 var(--c-ink);
+
+  /* ---------- Motion ---------- */
+  --dur-fast: 150ms;
+  --dur: 300ms;
+  --dur-slow: 700ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ticker-duration: 32s;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}

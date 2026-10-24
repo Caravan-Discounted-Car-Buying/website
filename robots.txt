@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://caravan.zerolink.co.in/sitemap.xml

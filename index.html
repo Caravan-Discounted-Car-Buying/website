@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caravan · Akele kyun? Group car buying with sealed dealer bids (early-stage)</title>
+  <meta name="description" content="An early-stage project: join a monthly group for a car make in your city and let local dealers place sealed discount bids. Demo only. Join the waitlist.">
+  <link rel="canonical" href="https://caravan.zerolink.co.in/">
+  <meta name="theme-color" content="#1f1650">
+  <meta name="color-scheme" content="light">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Caravan">
+  <meta property="og:url" content="https://caravan.zerolink.co.in/">
+  <meta property="og:title" content="Caravan · Akele kyun?">
+  <meta property="og:description" content="Join a monthly car group in your city and let dealers compete with sealed bids. An early-stage project, demo only.">
+  <meta property="og:image" content="https://caravan.zerolink.co.in/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Caravan: an illustrated hatchback carrying a group of friendly characters, with the words Akele kyun?">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
+
+  <!-- Mark JS as available before first paint so scroll-reveal never flashes content -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Classic deferred scripts (not ES modules): modules are blocked when the page is opened from file:// -->
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Ticker ============ -->
+  <div class="ticker" role="region" aria-label="Project status">
+    <div class="ticker__track">
+      <ul class="ticker__list">
+        <li>Early-stage demo</li>
+        <li>No real money involved</li>
+        <li>Sealed dealer bids</li>
+        <li><span lang="hi-Latn">Abhi sirf demo</span> (just a demo for now)</li>
+        <li><a href="#waitlist">Join the waitlist</a></li>
+      </ul>
+      <!-- Duplicate for a seamless loop; hidden from screen readers and keyboard -->
+      <ul class="ticker__list" aria-hidden="true">
+        <li>Early-stage demo</li>
+        <li>No real money involved</li>
+        <li>Sealed dealer bids</li>
+        <li><span lang="hi-Latn">Abhi sirf demo</span> (just a demo for now)</li>
+        <li><a href="#waitlist" tabindex="-1">Join the waitlist</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="./" aria-label="Caravan home">
+        <svg class="logo__mark" viewBox="0 0 64 28" aria-hidden="true" focusable="false">
+          <g stroke="#1f1650" stroke-width="2.5" stroke-linejoin="round">
+            <rect x="2" y="8" width="17" height="11" rx="4" fill="#f4b400"/>
+            <rect x="23.5" y="8" width="17" height="11" rx="4" fill="#b81f35"/>
+            <rect x="45" y="8" width="17" height="11" rx="4" fill="#0b6363"/>
+          </g>
+          <g fill="#1f1650">
+            <circle cx="7" cy="21" r="3"/><circle cx="15" cy="21" r="3"/>
+            <circle cx="28.5" cy="21" r="3"/><circle cx="36.5" cy="21" r="3"/>
+            <circle cx="50" cy="21" r="3"/><circle cx="58" cy="21" r="3"/>
+          </g>
+        </svg>
+        <span class="logo__word">Caravan</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#dealers">For dealers</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--small" href="#waitlist">Join waitlist</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. Hero ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__tags">
+            <span class="sticker sticker--red">Early-stage project</span>
+            <span class="sticker sticker--mint sticker--tilt-r"><span class="deva" lang="hi">साथ में</span> · together</span>
+          </p>
+
+          <h1 id="hero-title" class="hero__title">
+            <span class="outline-3d">Akele kyun?</span>
+            <span class="hero__subtitle">Why buy a car alone?</span>
+          </h1>
+
+          <p class="hero__lede">
+            Join a monthly group for one car make in your city, and let local dealers compete with
+            <strong>sealed discount bids</strong>. You get one clear result to look at.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#waitlist">Join the waitlist</a>
+            <a class="btn btn--ghost" href="#how">How it works</a>
+          </div>
+
+          <p class="status-note">
+            <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 5.5v5.5M10 13.5v1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            Early-stage demo: no real dealers, no real money yet.
+          </p>
+        </div>
+
+        <div class="hero__art">
+          <div class="hero__blob" aria-hidden="true"></div>
+          <figure class="arch arch--turmeric hero__arch">
+            <svg viewBox="0 0 400 440" role="img" aria-labelledby="hero-art-title">
+              <title id="hero-art-title">An illustrated red hatchback driving under festive bunting, with three cheerful round characters looking out of its windows.</title>
+              <defs>
+                <clipPath id="clip-rear-window"><path d="M184 226 L238 226 L238 262 L150 262 L176 232 Q180 226 184 226 Z"/></clipPath>
+                <clipPath id="clip-front-window"><path d="M248 226 L282 226 Q288 226 292 232 L312 262 L248 262 Z"/></clipPath>
+              </defs>
+              <!-- sun -->
+              <circle cx="300" cy="150" r="58" fill="#fff5e1"/>
+              <circle cx="300" cy="150" r="58" fill="none" stroke="#1f1650" stroke-width="3" stroke-dasharray="4 10" stroke-linecap="round"/>
+              <!-- bunting -->
+              <path d="M-10 36 Q200 84 410 36" fill="none" stroke="#1f1650" stroke-width="3"/>
+              <g stroke="#1f1650" stroke-width="3" stroke-linejoin="round">
+                <polygon points="6,43.8 34,43.8 20,71.8" fill="#b81f35"/>
+                <polygon points="46,50.2 74,50.2 60,78.2" fill="#0b6363"/>
+                <polygon points="86,55 114,55 100,83" fill="#fff5e1"/>
+                <polygon points="126,58.2 154,58.2 140,86.2" fill="#f6b9c9"/>
+                <polygon points="166,59.8 194,59.8 180,87.8" fill="#b81f35"/>
+                <polygon points="206,59.8 234,59.8 220,87.8" fill="#0b6363"/>
+                <polygon points="246,58.2 274,58.2 260,86.2" fill="#fff5e1"/>
+                <polygon points="286,55 314,55 300,83" fill="#f6b9c9"/>
+                <polygon points="326,50.2 354,50.2 340,78.2" fill="#b81f35"/>
+                <polygon points="366,43.8 394,43.8 380,71.8" fill="#0b6363"/>
+              </g>
+              <!-- road -->
+              <rect x="0" y="366" width="400" height="80" fill="#1f1650"/>
+              <g stroke="#f4b400" stroke-width="6" stroke-linecap="round">
+                <path d="M20 404h40M110 404h40M200 404h40M290 404h40M380 404h40"/>
+              </g>
+              <!-- speed lines -->
+              <g stroke="#1f1650" stroke-width="4" stroke-linecap="round">
+                <path d="M12 270h30M4 296h34M16 322h22"/>
+              </g>
+              <!-- hatchback (generic, not any real model) -->
+              <g stroke="#1f1650" stroke-width="4" stroke-linejoin="round">
+                <path d="M60 330 L60 290 Q62 272 80 268 L130 262 L170 222 Q178 214 192 214 L270 214 Q284 214 292 226 L318 262 L336 268 Q350 274 350 292 L350 330 Q350 338 342 338 L68 338 Q60 338 60 330 Z" fill="#b81f35"/>
+                <path d="M184 226 L238 226 L238 262 L150 262 L176 232 Q180 226 184 226 Z" fill="#fff5e1"/>
+                <path d="M248 226 L282 226 Q288 226 292 232 L312 262 L248 262 Z" fill="#fff5e1"/>
+              </g>
+              <!-- passengers -->
+              <g clip-path="url(#clip-rear-window)" stroke="#1f1650" stroke-width="3">
+                <circle cx="177" cy="258" r="15" fill="#cdebc2"/>
+                <rect x="200" y="238" width="28" height="34" rx="9" fill="#f6b9c9"/>
+              </g>
+              <g fill="#1f1650">
+                <circle cx="172" cy="254" r="2.2"/><circle cx="182" cy="254" r="2.2"/>
+                <circle cx="209" cy="250" r="2.2"/><circle cx="219" cy="250" r="2.2"/>
+              </g>
+              <g clip-path="url(#clip-front-window)" stroke="#1f1650" stroke-width="3">
+                <ellipse cx="275" cy="258" rx="17" ry="20" fill="#f4b400"/>
+              </g>
+              <circle cx="270" cy="252" r="2.2" fill="#1f1650"/><circle cx="281" cy="252" r="2.2" fill="#1f1650"/>
+              <path d="M268 259 q7 5 14 0" fill="none" stroke="#1f1650" stroke-width="2.5" stroke-linecap="round"/>
+              <g stroke="#1f1650" stroke-width="4" stroke-linejoin="round">
+                <path d="M243 226 L243 330" fill="none"/>
+                <path d="M200 286 h18 M262 286 h18" fill="none" stroke-linecap="round"/>
+                <rect x="334" y="280" width="16" height="12" rx="4" fill="#f4b400"/>
+                <rect x="60" y="282" width="10" height="16" rx="3" fill="#f4b400"/>
+                <!-- truck-art style trim -->
+                <path d="M70 312 h270" fill="none" stroke="#fff5e1" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+              </g>
+              <!-- wheels -->
+              <g stroke="#1f1650" stroke-width="4">
+                <circle cx="115" cy="338" r="28" fill="#1f1650"/>
+                <circle cx="295" cy="338" r="28" fill="#1f1650"/>
+                <circle cx="115" cy="338" r="11" fill="#fff5e1"/>
+                <circle cx="295" cy="338" r="11" fill="#fff5e1"/>
+              </g>
+            </svg>
+          </figure>
+
+          <!-- Ticket motif -->
+          <div class="ticket-float" aria-hidden="true">
+            <svg viewBox="0 0 220 110">
+              <path d="M12 4 H208 Q216 4 216 12 V40 A15 15 0 0 0 216 70 V98 Q216 106 208 106 H12 Q4 106 4 98 V70 A15 15 0 0 0 4 40 V12 Q4 4 12 4 Z" fill="#fff5e1" stroke="#1f1650" stroke-width="3"/>
+              <path d="M160 14 V96" stroke="#1f1650" stroke-width="2.5" stroke-dasharray="5 6"/>
+              <text x="22" y="40" font-family="Baloo 2, sans-serif" font-weight="800" font-size="20" fill="#1f1650">SEALED BID</text>
+              <text x="22" y="78" font-family="Baloo 2, sans-serif" font-weight="800" font-size="30" fill="#b81f35">₹ ? ? ? ?</text>
+              <circle cx="188" cy="55" r="17" fill="#b81f35" stroke="#1f1650" stroke-width="3"/>
+              <path d="M181 55 l5 5 l9 -10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="sticker sticker--ink sticker--tilt-l hero__badge" aria-hidden="true">Sealed bids</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- divider: hero (paper) → problem (ink) -->
+    <div class="wave wave--to-ink" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 30 C 120 0 240 0 360 30 S 600 60 720 30 S 960 0 1080 30 S 1320 60 1440 30 V60 H0 Z" fill="currentColor"/></svg>
+    </div>
+
+    <!-- ============ 2. The problem (hypothesis) ============ -->
+    <section class="section section--ink problem" aria-labelledby="problem-title">
+      <div class="container problem__grid">
+        <div>
+          <p><span class="sticker sticker--turmeric">Our hunch, not a fact (yet)</span></p>
+          <h2 id="problem-title" class="statement">
+            Showroom after showroom.<br>
+            <span class="statement__accent">Call after call.</span>
+          </h2>
+        </div>
+        <div class="problem__body reveal">
+          <p>
+            We think buying a car alone leaves you with very little leverage. One buyer, one dealer, a lot of
+            back-and-forth, and no easy way to tell whether the offer in front of you is a good one.
+          </p>
+          <p>
+            Caravan is testing a simple idea: if buyers who want the same car make in the same city show up
+            <em>together</em>, dealers have a reason to put their best number forward.
+          </p>
+          <p class="small-print">This is a hypothesis we're testing with a demo, not a promise or a proven result.</p>
+        </div>
+      </div>
+      <div class="truck-strip" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ 3. How it works: buyers ============ -->
+    <section id="how" class="section" aria-labelledby="buyers-title">
+      <div class="container">
+        <div class="section-head">
+          <p><span class="sticker sticker--pink">For buyers</span></p>
+          <h2 id="buyers-title" class="section-title">How it works</h2>
+          <p class="section-kicker"><span lang="hi-Latn">Paanch steps. Bas.</span> (Five steps. That's it.)</p>
+        </div>
+
+        <ol class="steps steps--buyers">
+          <li class="step step--turmeric reveal">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">Join a group</h3>
+            <p>Pick your city and a car make, then choose the model you want. Each city and make gets one group a month.</p>
+          </li>
+          <li class="step step--pink reveal">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Pay the booking amount</h3>
+            <p>Pay the booking amount plus a small platform fee before the monthly deadline. The fee isn't decided yet, and the demo uses pretend money.</p>
+          </li>
+          <li class="step step--mint reveal">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Dealers bid, sealed</h3>
+            <p>Local dealers see how many buyers want which models, not who you are. Each sends one sealed discount bid. Nobody sees anyone else's number.</p>
+          </li>
+          <li class="step step--marigold reveal">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3 class="step__title">See the result</h3>
+            <p>The best overall discount that meets the group's minimum wins. Dealer discount and manufacturer schemes show up as separate lines. If no bid meets the minimum, your booking amount comes back.</p>
+          </li>
+          <li class="step step--teal reveal">
+            <span class="step__num" aria-hidden="true">5</span>
+            <h3 class="step__title">Get your booking slip</h3>
+            <p>The winning dealer issues your booking slip, and Caravan passes it on to you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4. How it works: dealers ============ -->
+    <section id="dealers" class="section section--deep" aria-labelledby="dealers-title">
+      <div class="wave wave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 30 C 120 0 240 0 360 30 S 600 60 720 30 S 960 0 1080 30 S 1320 60 1440 30 V0 H0 Z" fill="currentColor"/></svg>
+      </div>
+      <div class="container">
+        <div class="section-head">
+          <p><span class="sticker sticker--ink">For dealers</span></p>
+          <h2 id="dealers-title" class="section-title"><span lang="hi-Latn">Ek group, ek sealed bid.</span></h2>
+          <p class="section-kicker">One group. One sealed bid. A whole month's bookings for that make.</p>
+        </div>
+
+        <ol class="steps steps--dealers">
+          <li class="step step--paper reveal">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">See the demand</h3>
+            <p>On a fixed day each month, see how many buyers in your city want each model of a make. No buyer details at this stage.</p>
+          </li>
+          <li class="step step--paper reveal">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Place one sealed bid</h3>
+            <p>Enter a discount in ₹ for each model in the group. Revise it as often as you like until bidding closes.</p>
+          </li>
+          <li class="step step--paper reveal">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Win the whole group</h3>
+            <p>The best overall discount that meets the group's minimum takes every booking in that group.</p>
+          </li>
+          <li class="step step--paper reveal">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3 class="step__title">Issue booking slips</h3>
+            <p>Issue one booking slip per buyer through Caravan. How and when dealers get paid is still being worked out, with dealer input.</p>
+          </li>
+        </ol>
+
+        <p class="dealer-cta">Run a dealership? We'd genuinely like to hear how this would work for you. <a href="#waitlist">Join as a dealer</a></p>
+      </div>
+    </section>
+
+    <!-- ============ 5. What's different ============ -->
+    <section id="different" class="section" aria-labelledby="diff-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2 id="diff-title" class="section-title"><span lang="hi-Latn">Kya alag hai?</span></h2>
+          <p class="section-kicker">What's different, in three points.</p>
+        </div>
+
+        <ul class="badges">
+          <li class="badge-card reveal">
+            <span class="badge-icon badge-icon--red" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="18" width="44" height="30" rx="4" fill="#fff5e1" stroke="#1f1650" stroke-width="3"/><path d="M10 22 L32 37 L54 22" fill="none" stroke="#1f1650" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="38" r="7" fill="#f4b400" stroke="#1f1650" stroke-width="3"/></svg>
+            </span>
+            <h3>Sealed bids</h3>
+            <p>Dealers can't see each other's offers, so nobody is bidding against a number they peeked at.</p>
+          </li>
+          <li class="badge-card reveal">
+            <span class="badge-icon badge-icon--turmeric" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="17" width="44" height="12" rx="6" fill="#b81f35" stroke="#1f1650" stroke-width="3"/><rect x="10" y="37" width="44" height="12" rx="6" fill="#fff5e1" stroke="#1f1650" stroke-width="3" stroke-dasharray="5 4"/></svg>
+            </span>
+            <h3>Schemes on their own line</h3>
+            <p>Manufacturer schemes, like exchange or loyalty offers, depend on whether you qualify. So they're listed separately and never counted in the winning discount.</p>
+          </li>
+          <li class="badge-card reveal">
+            <span class="badge-icon badge-icon--teal" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M48 24 A18 18 0 1 0 50 40" fill="none" stroke="#fff5e1" stroke-width="4" stroke-linecap="round"/><path d="M41 22 L49 24 L51 15" fill="none" stroke="#fff5e1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="32" y="41" text-anchor="middle" font-family="Baloo 2, sans-serif" font-weight="800" font-size="20" fill="#fff5e1">₹</text></svg>
+            </span>
+            <h3>A minimum, or a refund</h3>
+            <p>Every group has a minimum discount. If no dealer meets it, there's no deal and your booking amount is refunded. Whether a small fee is kept is still being decided.</p>
+          </li>
+        </ul>
+        <p class="diff-note">That's the whole pitch. No savings promises; we'll know more once real dealers try it.</p>
+      </div>
+    </section>
+
+    <!-- ============ 6. FAQ ============ -->
+    <section id="faq" class="section section--pink" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <h2 id="faq-title" class="section-title"><span lang="hi-Latn">Sawaal-jawaab</span></h2>
+          <p class="section-kicker">Questions, answered honestly.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Is this live?</summary>
+            <p>No. Caravan is an early-stage project. There's a demo with pretend money and made-up dealers and car makes. Join the waitlist if you'd like to hear when that changes.</p>
+          </details>
+          <details>
+            <summary>Is my money safe?</summary>
+            <p>There's no real money involved right now: nothing to pay and nothing at stake. The demo uses pretend balances. Real payments would only come after the legal and payment side has been properly worked out, and we'd explain exactly how it works before anyone pays anything.</p>
+          </details>
+          <details>
+            <summary>What will it cost?</summary>
+            <p>Not decided. The plan is a booking amount plus a platform fee, but the fee amount, how it's calculated and what happens to it in every case are still open questions.</p>
+          </details>
+          <details>
+            <summary>Am I guaranteed a discount?</summary>
+            <p>No. If no dealer bids at or above the group's minimum, the group doesn't go ahead and your booking amount is refunded. How the platform fee is handled in that case is still being decided.</p>
+          </details>
+          <details>
+            <summary>Who sees my details?</summary>
+            <p>In the planned design, dealers only see how many buyers want each model. Only the winning dealer gets the buyer details it needs to issue booking slips. The waitlist stores only what you type into the form; see the <a href="privacy.html">privacy note</a>.</p>
+          </details>
+          <details>
+            <summary>Which cities and car makes?</summary>
+            <p>None yet. Tell us your city and the car make you're considering in the form below. It helps us decide where a first test would make sense.</p>
+          </details>
+          <details>
+            <summary>Is Caravan linked to any car company or dealer?</summary>
+            <p>No. Caravan is an independent project. It isn't affiliated with, or endorsed by, any car manufacturer, dealer or brand.</p>
+          </details>
+          <details>
+            <summary>I'm a dealer. Can I take part?</summary>
+            <p>Not yet, but we'd really like to hear how bidding for a group would work for you. Join the waitlist as a dealer and we'll get in touch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. Waitlist ============ -->
+    <section id="waitlist" class="section waitlist" aria-labelledby="waitlist-title">
+      <div class="container container--narrow">
+        <svg class="crew" viewBox="0 0 360 150" role="img" aria-labelledby="crew-title">
+          <title id="crew-title">Four friendly abstract characters standing together and waving.</title>
+          <g stroke="#1f1650" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+            <!-- 1: round -->
+            <path d="M30 92 L12 70" fill="none"/>
+            <circle cx="60" cy="110" r="36" fill="#cdebc2"/>
+            <!-- 2: rounded square -->
+            <rect x="104" y="52" width="66" height="94" rx="20" fill="#f6b9c9"/>
+            <!-- 3: tall pill, waving -->
+            <path d="M232 70 L254 40" fill="none"/>
+            <rect x="186" y="26" width="48" height="120" rx="24" fill="#0b6363"/>
+            <!-- 4: blob -->
+            <path d="M262 146 C 250 110 262 80 296 80 C 334 80 352 110 340 146 Z" fill="#f4b400"/>
+            <path d="M344 112 L356 92" fill="none"/>
+          </g>
+          <!-- faces -->
+          <g fill="#1f1650">
+            <circle cx="50" cy="104" r="3.5"/><circle cx="70" cy="104" r="3.5"/>
+            <circle cx="127" cy="86" r="3.5"/><circle cx="147" cy="86" r="3.5"/>
+            <circle cx="286" cy="108" r="3.5"/><circle cx="306" cy="108" r="3.5"/>
+          </g>
+          <g fill="#fff5e1"><circle cx="201" cy="58" r="3.5"/><circle cx="219" cy="58" r="3.5"/></g>
+          <g fill="none" stroke-width="3" stroke-linecap="round">
+            <path d="M50 118 q10 9 20 0" stroke="#1f1650"/>
+            <path d="M128 100 q9 7 18 0" stroke="#1f1650"/>
+            <path d="M202 72 q8 7 16 0" stroke="#fff5e1"/>
+            <path d="M287 122 q9 8 18 0" stroke="#1f1650"/>
+          </g>
+          <g stroke="#1f1650" stroke-width="3" stroke-linecap="round"><path d="M254 22 l4 -8 M266 30 l8 -4 M246 18 l-2 -8"/></g>
+        </svg>
+
+        <div class="form-card">
+          <div class="form-card__head">
+            <p><span class="sticker sticker--red">Early-stage project</span></p>
+            <h2 id="waitlist-title" class="section-title"><span lang="hi-Latn">List mein naam likhwao.</span></h2>
+            <p class="section-kicker">Put your name on the list. We'll email you when there's something worth seeing.</p>
+          </div>
+
+          <form id="waitlist-form" class="form" novalidate>
+            <div class="field">
+              <label for="f-email">Email <span class="req">(required)</span></label>
+              <input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required aria-describedby="f-email-err">
+              <p id="f-email-err" class="field__error" hidden></p>
+            </div>
+
+            <fieldset class="field">
+              <legend>I am a <span class="req">(required)</span></legend>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="role" value="buyer" required aria-describedby="f-role-err"><span>Buyer</span></label>
+                <label class="choice"><input type="radio" name="role" value="dealer" aria-describedby="f-role-err"><span>Dealer</span></label>
+              </div>
+              <p id="f-role-err" class="field__error" hidden></p>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-city">City</label>
+              <input id="f-city" name="city" type="text" autocomplete="address-level2" maxlength="60" placeholder="e.g. Pune" aria-describedby="f-city-err">
+              <p id="f-city-err" class="field__error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="f-make">Car make you're interested in <span class="opt">(optional)</span></label>
+              <input id="f-make" name="make" type="text" maxlength="60" aria-describedby="f-make-hint f-make-err">
+              <p id="f-make-hint" class="field__hint">Any make. It helps us decide where to start.</p>
+              <p id="f-make-err" class="field__error" hidden></p>
+            </div>
+
+            <!-- Honeypot: real people never see or fill this -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-company">Leave this field empty</label>
+              <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <p class="consent">
+              By joining, you agree that Caravan can email you about this project. You can ask us to delete your details at any time.
+              Read the <a href="privacy.html">privacy note</a>.
+            </p>
+
+            <button class="btn btn--block" type="submit">
+              <span class="btn__label">Count me in</span>
+            </button>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+            <p class="small-print">Caravan is an early-stage demo. Joining the waitlist doesn't commit you to anything, and no payment is ever asked for here.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 8. Footer ============ -->
+  <footer class="site-footer">
+    <div class="truck-strip truck-strip--top" aria-hidden="true"></div>
+    <div class="container site-footer__inner">
+      <div>
+        <p class="logo logo--footer"><span class="logo__word">Caravan</span></p>
+        <p>An early-stage project. Demo only: no real dealers, no real money.</p>
+        <p class="small-print">Not affiliated with, or endorsed by, any car manufacturer, dealer or brand.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy note</a></li>
+        <!-- TODO: replace with a real, monitored inbox before launch -->
+        <li><a href="mailto:hello@example.com">hello@example.com</a> <span class="small-print">(placeholder)</span></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
